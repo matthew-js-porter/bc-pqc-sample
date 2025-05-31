@@ -1,0 +1,224 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.example:pqc-demo >------------------------
+[INFO] Building pqc-demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.0:run (default-cli) > test-compile @ pqc-demo >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ pqc-demo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ pqc-demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pqc-demo ---
+[INFO] Copying 2 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ pqc-demo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.0:run (default-cli) < test-compile @ pqc-demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.0:run (default-cli) @ pqc-demo ---
+[INFO] Attaching agents: []
+Available security providers:
+ - SUN - SUN (DSA key/parameter generation; DSA signing; SHA-1, MD5 digests; SecureRandom; X.509 certificates; PKCS12, JKS & DKS keystores; PKIX CertPathValidator; PKIX CertPathBuilder; LDAP, Collection CertStores, JavaPolicy Policy; JavaLoginConfig Configuration)
+ - SunRsaSign - Sun RSA signature provider
+ - SunEC - Sun Elliptic Curve provider
+ - SunJSSE - Sun JSSE provider(PKCS12, SunX509/PKIX key/trust factories, SSLv3/TLSv1/TLSv1.1/TLSv1.2/TLSv1.3/DTLSv1.0/DTLSv1.2)
+ - SunJCE - SunJCE Provider (implements RSA, DES, Triple DES, AES, Blowfish, ARCFOUR, RC2, PBE, Diffie-Hellman, HMAC, ChaCha20)
+ - SunJGSS - Sun (Kerberos v5, SPNEGO)
+ - SunSASL - Sun SASL provider(implements client mechanisms for: DIGEST-MD5, EXTERNAL, PLAIN, CRAM-MD5, NTLM; server mechanisms for: DIGEST-MD5, CRAM-MD5, NTLM)
+ - XMLDSig - XMLDSig (DOM XMLSignatureFactory; DOM KeyInfoFactory; C14N 1.0, C14N 1.1, Exclusive C14N, Base64, Enveloped, XPath, XPath2, XSLT TransformServices)
+ - SunPCSC - Sun PC/SC provider
+ - JdkLDAP - JdkLDAP Provider (implements LDAP CertStore)
+ - JdkSASL - JDK SASL provider(implements client and server mechanisms for GSSAPI)
+ - Apple - Apple Provider
+ - SunPKCS11 - Unconfigured and unusable PKCS11 provider
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2025-05-31T13:27:44.496-04:00  INFO 20976 --- [pqc-demo] [           main] com.example.pqcdemo.PqcDemoApplication   : Starting PqcDemoApplication using Java 21 with PID 20976 (/Users/mporter/workspace/pqc/pqc-demo/target/classes started by mporter in /Users/mporter/workspace/pqc/pqc-demo)
+2025-05-31T13:27:44.502-04:00  INFO 20976 --- [pqc-demo] [           main] com.example.pqcdemo.PqcDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T13:27:45.801-04:00  INFO 20976 --- [pqc-demo] [           main] o.b.jsse.provider.PropertyUtils          : Found string security property [jdk.tls.disabledAlgorithms]: SSLv3, TLSv1, TLSv1.1, DTLSv1.0, RC4, DES, MD5withRSA, DH keySize < 1024, EC keySize < 224, 3DES_EDE_CBC, anon, NULL, ECDH
+2025-05-31T13:27:45.802-04:00  INFO 20976 --- [pqc-demo] [           main] o.b.jsse.provider.PropertyUtils          : Found string security property [jdk.certpath.disabledAlgorithms]: MD2, MD5, SHA1 jdkCA & usage TLSServer, RSA keySize < 1024, DSA keySize < 1024, EC keySize < 224, SHA1 usage SignedJAR & denyAfter 2019-01-01
+2025-05-31T13:27:45.803-04:00  WARN 20976 --- [pqc-demo] [           main] o.b.j.p.DisabledAlgorithmConstraints     : Ignoring unsupported entry in 'jdk.certpath.disabledAlgorithms': SHA1 jdkCA & usage TLSServer
+2025-05-31T13:27:45.803-04:00  WARN 20976 --- [pqc-demo] [           main] o.b.j.p.DisabledAlgorithmConstraints     : Ignoring unsupported entry in 'jdk.certpath.disabledAlgorithms': SHA1 usage SignedJAR & denyAfter 2019-01-01
+Supported cipher suites:
+ - TLS_AES_128_CCM_8_SHA256
+ - TLS_AES_128_CCM_SHA256
+ - TLS_AES_128_GCM_SHA256
+ - TLS_AES_256_GCM_SHA384
+ - TLS_CHACHA20_POLY1305_SHA256
+ - TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
+ - TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+ - TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
+ - TLS_DHE_DSS_WITH_AES_128_GCM_SHA256
+ - TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+ - TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+ - TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+ - TLS_DHE_DSS_WITH_ARIA_128_CBC_SHA256
+ - TLS_DHE_DSS_WITH_ARIA_128_GCM_SHA256
+ - TLS_DHE_DSS_WITH_ARIA_256_CBC_SHA384
+ - TLS_DHE_DSS_WITH_ARIA_256_GCM_SHA384
+ - TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA
+ - TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA256
+ - TLS_DHE_DSS_WITH_CAMELLIA_128_GCM_SHA256
+ - TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA
+ - TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA256
+ - TLS_DHE_DSS_WITH_CAMELLIA_256_GCM_SHA384
+ - TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
+ - TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+ - TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+ - TLS_DHE_RSA_WITH_AES_128_CCM
+ - TLS_DHE_RSA_WITH_AES_128_CCM_8
+ - TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+ - TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+ - TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+ - TLS_DHE_RSA_WITH_AES_256_CCM
+ - TLS_DHE_RSA_WITH_AES_256_CCM_8
+ - TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+ - TLS_DHE_RSA_WITH_ARIA_128_CBC_SHA256
+ - TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256
+ - TLS_DHE_RSA_WITH_ARIA_256_CBC_SHA384
+ - TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384
+ - TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA
+ - TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
+ - TLS_DHE_RSA_WITH_CAMELLIA_128_GCM_SHA256
+ - TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+ - TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256
+ - TLS_DHE_RSA_WITH_CAMELLIA_256_GCM_SHA384
+ - TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+ - TLS_DH_anon_WITH_AES_128_CBC_SHA
+ - TLS_DH_anon_WITH_AES_128_CBC_SHA256
+ - TLS_DH_anon_WITH_AES_128_GCM_SHA256
+ - TLS_DH_anon_WITH_AES_256_CBC_SHA
+ - TLS_DH_anon_WITH_AES_256_CBC_SHA256
+ - TLS_DH_anon_WITH_AES_256_GCM_SHA384
+ - TLS_DH_anon_WITH_ARIA_128_CBC_SHA256
+ - TLS_DH_anon_WITH_ARIA_128_GCM_SHA256
+ - TLS_DH_anon_WITH_ARIA_256_CBC_SHA384
+ - TLS_DH_anon_WITH_ARIA_256_GCM_SHA384
+ - TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA
+ - TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA256
+ - TLS_DH_anon_WITH_CAMELLIA_128_GCM_SHA256
+ - TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA
+ - TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA256
+ - TLS_DH_anon_WITH_CAMELLIA_256_GCM_SHA384
+ - TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA
+ - TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+ - TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+ - TLS_ECDHE_ECDSA_WITH_AES_128_CCM
+ - TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
+ - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+ - TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+ - TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+ - TLS_ECDHE_ECDSA_WITH_AES_256_CCM
+ - TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8
+ - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+ - TLS_ECDHE_ECDSA_WITH_ARIA_128_CBC_SHA256
+ - TLS_ECDHE_ECDSA_WITH_ARIA_128_GCM_SHA256
+ - TLS_ECDHE_ECDSA_WITH_ARIA_256_CBC_SHA384
+ - TLS_ECDHE_ECDSA_WITH_ARIA_256_GCM_SHA384
+ - TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256
+ - TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256
+ - TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384
+ - TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384
+ - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+ - TLS_ECDHE_ECDSA_WITH_NULL_SHA
+ - TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA
+ - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+ - TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+ - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+ - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+ - TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+ - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+ - TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256
+ - TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256
+ - TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384
+ - TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384
+ - TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
+ - TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256
+ - TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384
+ - TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384
+ - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+ - TLS_ECDHE_RSA_WITH_NULL_SHA
+ - TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA
+ - TLS_ECDH_anon_WITH_AES_128_CBC_SHA
+ - TLS_ECDH_anon_WITH_AES_256_CBC_SHA
+ - TLS_RSA_WITH_3DES_EDE_CBC_SHA
+ - TLS_RSA_WITH_AES_128_CBC_SHA
+ - TLS_RSA_WITH_AES_128_CBC_SHA256
+ - TLS_RSA_WITH_AES_128_CCM
+ - TLS_RSA_WITH_AES_128_CCM_8
+ - TLS_RSA_WITH_AES_128_GCM_SHA256
+ - TLS_RSA_WITH_AES_256_CBC_SHA
+ - TLS_RSA_WITH_AES_256_CBC_SHA256
+ - TLS_RSA_WITH_AES_256_CCM
+ - TLS_RSA_WITH_AES_256_CCM_8
+ - TLS_RSA_WITH_AES_256_GCM_SHA384
+ - TLS_RSA_WITH_ARIA_128_CBC_SHA256
+ - TLS_RSA_WITH_ARIA_128_GCM_SHA256
+ - TLS_RSA_WITH_ARIA_256_CBC_SHA384
+ - TLS_RSA_WITH_ARIA_256_GCM_SHA384
+ - TLS_RSA_WITH_CAMELLIA_128_CBC_SHA
+ - TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256
+ - TLS_RSA_WITH_CAMELLIA_128_GCM_SHA256
+ - TLS_RSA_WITH_CAMELLIA_256_CBC_SHA
+ - TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256
+ - TLS_RSA_WITH_CAMELLIA_256_GCM_SHA384
+ - TLS_RSA_WITH_NULL_SHA
+ - TLS_RSA_WITH_NULL_SHA256
+Tomcat connector configured with Bouncy Castle JSSE provider
+2025-05-31T13:27:46.035-04:00  INFO 20976 --- [pqc-demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T13:27:46.045-04:00  INFO 20976 --- [pqc-demo] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T13:27:46.046-04:00  INFO 20976 --- [pqc-demo] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-31T13:27:46.078-04:00  INFO 20976 --- [pqc-demo] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T13:27:46.080-04:00  INFO 20976 --- [pqc-demo] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1528 ms
+2025-05-31T13:27:46.187-04:00 DEBUG 20976 --- [pqc-demo] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-05-31T13:27:46.276-04:00 DEBUG 20976 --- [pqc-demo] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2025-05-31T13:27:46.342-04:00 DEBUG 20976 --- [pqc-demo] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-31T13:27:46.355-04:00 DEBUG 20976 --- [pqc-demo] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-31T13:27:46.368-04:00 DEBUG 20976 --- [pqc-demo] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-31T13:27:46.478-04:00  INFO 20976 --- [pqc-demo] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2025-05-31T13:27:46.521-04:00  WARN 20976 --- [pqc-demo] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-31T13:27:46.547-04:00  INFO 20976 --- [pqc-demo] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-31T13:27:46.557-04:00 ERROR 20976 --- [pqc-demo] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.950 s
+[INFO] Finished at: 2025-05-31T13:27:46-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.0:run (default-cli) on project pqc-demo: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

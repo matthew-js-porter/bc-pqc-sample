@@ -3,6 +3,7 @@ package com.example;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.jsse.provider.BouncyCastleJsseProvider;
 import org.bouncycastle.pqc.jcajce.provider.BouncyCastlePQCProvider;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -35,9 +36,9 @@ public class PqcClientTest {
     })
     void connectsWithConfiguredGroupName(final String groupName) throws KeyManagementException, NoSuchAlgorithmException, NoSuchProviderException {
         // Register BC and BCJSSE providers
-        Security.addProvider(new BouncyCastleProvider());
-        Security.addProvider(new BouncyCastleJsseProvider());
-        Security.addProvider(new BouncyCastlePQCProvider());
+        Security.insertProviderAt(new BouncyCastleProvider(), 1);
+        Security.insertProviderAt(new BouncyCastleJsseProvider(), 1);
+        Security.insertProviderAt(new BouncyCastlePQCProvider(), 2);
 
         // Create SSLContext using BCJSSE
         SSLContext context = SSLContext.getInstance("TLSv1.3", "BCJSSE");
@@ -61,5 +62,16 @@ public class PqcClientTest {
                 System.out.println("Cipher Suite: " + socket.getSession().getCipherSuite());
             }
         }).doesNotThrowAnyException();
+    }
+
+    @Test
+    void printNamedGroups() throws NoSuchAlgorithmException {
+        SSLContext context = SSLContext.getDefault();
+        SSLParameters params = context.getDefaultSSLParameters();
+
+        String[] supportedGroups = params.getNamedGroups();
+
+        System.out.println("🔐 Supported Named Groups:");
+        Arrays.stream(supportedGroups).forEach(group -> System.out.println("  - " + group));
     }
 }

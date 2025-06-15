@@ -13,8 +13,8 @@ public class PqcDemoApplication {
 
 	public static void main(String[] args) {
 		Security.insertProviderAt(new BouncyCastleProvider(), 1);
-		Security.insertProviderAt(new BouncyCastleJsseProvider(), 1);
 		Security.insertProviderAt(new BouncyCastlePQCProvider(), 2);
+		Security.insertProviderAt(new BouncyCastleJsseProvider("BC,BCPQC"), 3);
 		SpringApplication.run(PqcDemoApplication.class, args);
 	}
 }

@@ -1,9 +1,5 @@
 package com.example.pqcdemo;
 
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.jsse.provider.BouncyCastleJsseProvider;
-import org.bouncycastle.pqc.jcajce.provider.BouncyCastlePQCProvider;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,24 +9,15 @@ import javax.net.ssl.*;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-import java.security.Security;
 import java.security.cert.X509Certificate;
 
 import static org.assertj.core.api.Assertions.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, useMainMethod = SpringBootTest.UseMainMethod.ALWAYS)
 class PqcDemoApplicationTest {
 
     @LocalServerPort
     private int port;
-
-    @BeforeAll
-    static void setupProviders() {
-        Security.insertProviderAt(new BouncyCastleProvider(), 1);
-        Security.insertProviderAt(new BouncyCastlePQCProvider(), 2);
-        Security.insertProviderAt(new BouncyCastleJsseProvider("BC,BCPQC"), 3);
-    }
-
     /*
         openssl s_client -connect localhost:8443 -groups X25519MLKEM768 -tls1_3
      */

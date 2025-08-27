@@ -2,7 +2,6 @@ package com.example;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.jsse.provider.BouncyCastleJsseProvider;
-import org.bouncycastle.pqc.jcajce.provider.BouncyCastlePQCProvider;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -23,8 +22,7 @@ public class PqcClientTest {
     @BeforeAll
     static void setupProviders() {
         Security.insertProviderAt(new BouncyCastleProvider(), 1);
-        Security.insertProviderAt(new BouncyCastlePQCProvider(), 2);
-        Security.insertProviderAt(new BouncyCastleJsseProvider("BC,BCPQC"), 3);
+        Security.insertProviderAt(new BouncyCastleJsseProvider(), 2);
     }
 
     /*
